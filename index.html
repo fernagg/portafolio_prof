@@ -8,9 +8,10 @@
     <!-- css propio --> <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Iconos de Bootstrap --> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
-<body class="fondo">
+<body>
+    <!-- navBar-->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background: #23c4e0;">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: #23c4e0;">
             <div class="container-fluid">
                 <a class="navbar-brand me-auto" href="#" style="font-family:'Gill Sans', sans-serif, !important">Portafolio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -21,40 +22,123 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Perfil</a>
+                            <a class="nav-link active" aria-current="page" href="#perfil">Perfil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Proyectos</a>
+                            <a class="nav-link active" aria-current="page" href="#proyectos">Proyectos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+                            <a class="nav-link active" aria-current="page" href="#contacto">Contacto</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <br>
-    <main class="container-fluid d-flex flex-column">
-        <img src="./assets/img/falcon.jpg" class="img-fluid" alt="Foto Persolan">
-        <h1 class="text-light bg-success" style="color: #778899;">Portafolio Profesional</h1>
-        <article class="border border-5 border-danger">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quo dicta optio voluptas velit eligendi esse quasi saepe assumenda voluptatum, molestiae fugit minus fuga est cumque aliquam ea dolorum dolores!</p>
-        </article>
-        <article>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus quisquam deserunt in culpa aliquam quod? Cumque magni commodi amet asperiores dicta nesciunt minus est mollitia dolor alias, ab laboriosam ipsam.</p>
-        </article>
-        <article class="container-md bg-success">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus aut recusandae est totam veritatis perferendis possimus nesciunt quasi suscipit explicabo. Fugiat nesciunt sunt atque nobis expedita ab ipsa repellat dolore!</p>
-        </article>
-        
-    </main>
-    
-    <br><br><br>
-    <!-- Contacto -->
-    <!-- Pie de pagina (footer) -->
+    <!-- Primera seccion con una descripcion de la pagina e imagen-->
+    <section id="inicio">
+        <div class="card mb-3" style="width: auto; background-color: #23c4e0; color: white">
+            <div class="row g-0">
+              <div class="col-md-8">
+                <div class="card-body p-5">
+                  <h5 class="card-title">Portafolio Profesional</h5>
+                  <p class="card-text">En este sitio podrás conoces acerca de mi experiencia profesional y mi formación laboral. Si tienes alguna duda o algún interes en la realización de un proyecto no dudes en contactarme.</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <img src="./assets/img/inicial.png" class="img-fluid rounded-start" alt="...">
+              </div>
+            </div>
+          </div>
+    </section>
+    <!-- segunda seccion con contenido del perfil profesional y formacion-->
+    <section id="perfil" class="container-fluid d-flex flex-column">
+      <h1>Perfil profesional y laboral.</h1>
+      <article class="info-texto"  style="color: white; background-color: #23c4e0;">
+          <p>En este contenido habrá una descripción de las habilidades técnicas y profesionales adquiridas a través de la experiencia y el estudio!</p>
+      </article>
+      <article class="info-texto">
+          <p>Acá encontraremos un detalle de las habiliades blandas que uno presenta, las cuales son fundamentales en la actualidad en cualquier trabajo.</p>
+      </article>
+      <article class="info-texto"  style="color: white; background-color: #23c4e0;">
+          <p>Para finalizar se apuntará a los objetivos personales y profesionales que se espera en los nuevos proyectos</p>
+      </article>
+      
+    </section>
+    <!-- tercera seccion de los proyectos realizados-->
+    <section id="proyectos" class="container-fluid d-flex flex-column text-center">
+        <h1>Proyectos realizados en desarrollo.</h1>
+        <div>
+            <button onclick="mostrarLista()">Mostrar detalles</button>
+            <ul id="lista">
+                <li><p><b>Proyecto numero uno</b>. descripcion breve del proyecto y su alcance, herramientas utilizadas y participacion si fue desarrollado en equipo.</p></li>
+                <li><p><b>Nombre del proyecto.</b> descripcion breve del proyecto y su alcance, herramientas utilizadas y participacion si fue desarrollado en equipo..</p></li>
+                <li><p><b>Proyecto.</b> descripcion breve del proyecto y su alcance, herramientas utilizadas y participacion si fue desarrollado en equipo.</p></li>
+            </ul>
+        </div>
+        <div id="carouselExampleCaptions" class="carousel slide" style="padding: 30px;">
+          <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner"> <!-- Imagenes y contenido del carrusel-->
+              <div class="carousel-item active">
+                  <img src="./assets/img/sitio1.jpg" class="d-block w-100" alt="Nombre Proyecto">
+                  <div class="carousel-caption d-none d-md-block">
+                      <h5>Nombre Proyecto</h5>
+                      <p>descricion breve del proyecto.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <img src="./assets/img/sitio2.jpg" class="d-block w-100" alt="Nombre proyecto">
+                  <div class="carousel-caption d-none d-md-block">
+                      <h5>Nombre proyecto</h5>
+                      <p>otra descripcion.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <img src="./assets/img/sitio3.jpg" class="d-block w-100" alt="Nombre Proyecto">
+                  <div class="carousel-caption d-none d-md-block">
+                      <h5>nombre tercer proyecto</h5>
+                      <p>descircion breve del proycto.</p>
+                  </div>
+              </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </section>
+    <!-- cuarta seccion con el formulario de contacto-->
+    <section id="contacto">
+        <form class="row g-3 needs-validation" novalidate>    
+                  <h1>Contacto</h1>
+                      <div class="col-md-8">
+                          <input id="fNombre" type="text" placeholder="Nombre" class="form-control" required>
+                          <div id="mensaje1" class="errorForm">Ingresa tu nombre</div>
+                        </div>
+                      <div class="col-md-8">
+                          <input id="fEmail" type="text" placeholder="Email@email.com" class="form-control" required>
+                          <div id="mesaje1" class="errorForm">Ingresa tu correo</div>
+                        </div>
+                      <div class="col-md-8">
+                          <textarea class="form-control" id="fMensaje" placeholder="Ingresa aquí tu mensaje. Pronto te responderemos." rows="7" required></textarea>
+                          <div id="mesaje1" class="errorForm">Ingresa tu consulta</div>
+                      </div>
+                      <div class="col-md-12 text-center">
+                          <button type="submit" id="bEnviar" class="btn btn-primary btn-lg">Enviar</button>
+                      </div>
+            </form>
+    </section>
+    <!-- pie de pagina y enlaces -->
     <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center"> 
-        <img class="footer-logo" src="./assets/img/icono-blanco.svg" alt="Logo del portafolio">
+        <img class="footer-logo" src="./assets/img/icono.png" alt="Logo del portafolio">
         <p class="footer-texto text-center">Aprendizaje constante.<br>Creemos un proyecto juntos.</p>
         <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
             <a href="https://github.com/freeCodeCamp/freeCodeCamp" target="_blank" rel="noopener noreferrer">
@@ -69,8 +153,10 @@
         </div>
         <div class="derechos-de-autor">Fernando Godoy Gonzalez (2024) &#169;</div>
     </footer>
+
+    
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script> <!-- Script jquery-->
-    <script src="./assets/js/jquery.js"></script> <!-- Script propio-->
+    <script src="./assets/js/script.js"></script> <!-- Script propio-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> <!-- Script bootstrap-->
 </body>
 </html>

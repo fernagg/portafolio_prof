@@ -1,12 +1,38 @@
-.fondo{
-    background-image: url(../img/bg3.jpg);
+body {
+    background-image: url(../img/bg.jpg);
+}
+
+section {
+    padding: 15px;
+}
+
+h1, .card-title {
+    font-size: 2rem;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .seccion-oscura {
     color: white;
     background-color: #23c4e0;
 }
+
+.info-texto {
+    font-size: 1rem;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
     
+#lista{
+    display: none;
+}
+
+.errorForm{
+    display: none;
+}
+
 /* Pie de pagina (footer) */  
 footer {
     min-height: 500px;
